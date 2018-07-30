@@ -5,12 +5,12 @@
 [WebDAV](http://www.ietf.org/rfc/rfc4918.txt) server
 written in Python and based on [WSGI](http://www.python.org/dev/peps/pep-0333/).
 
-This Dcoker image runs WsgiDAV as a stand-alone WebDAV server 
+This Docker image runs WsgiDAV as a stand-alone WebDAV server 
 that publishes a local directory for reading and writing.
 
 Pull image:
 ```
-docker build --rm -f Dockerfile -t mar10/wsgidav .
+docker pull mar10/wsgidav
 ```
 
 Run:
@@ -21,7 +21,8 @@ for example
 ```
 docker run --rm -it -p 8080:8080 -v c:/temp:/var/wsgidav-root mar10/wsgidav
 ```
-Then open (or enter this URL in Windows File Explorer or any other WebDAV client):
+Then open this URL in a web browser, Windows File Explorer, 
+or any other WebDAV client:
 ```
 http://localhost:8080/
 ```
@@ -35,5 +36,6 @@ docker build --rm -f Dockerfile -t mar10/wsgidav .
 ## More info on WsgiDAV
 
   * [Read The Docs](http://wsgidav.rtfd.org) for details.
-  * [Discussion Group](https://groups.google.com/forum/#!forum/wsgidav)
+  * [WsgiDAV project](https://github.com/mar10/wsgidav)
+  * [Discussion group](https://groups.google.com/forum/#!forum/wsgidav)
   * [Stackoverflow](http://stackoverflow.com/questions/tagged/wsgidav)
